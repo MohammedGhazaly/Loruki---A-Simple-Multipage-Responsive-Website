@@ -7,6 +7,7 @@
 This is a link to the video :
 
 [Loruki](https://www.youtube.com/watch?v=p0bGHP-PXD4)
+
 [Live Preview](https://mohammedghazaly.github.io/Loruki---A-Simple-Multipage-Responsive-Website/index.html)
 
 I coded it myself and added some changes.
