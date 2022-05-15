@@ -1,0 +1,48 @@
+// NAVIGATION BAR *STYLING*
+.navbar {
+  background-color: $primary-color;
+  color: $white-color;
+  min-height: 7rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // ************
+    height: 100%;
+  }
+  &__logo {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  &__list {
+    display: flex;
+    gap: 2rem;
+  }
+  &__link {
+    color: $white-color;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom-color: $white-color;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    height: 12rem;
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__list {
+      background-color: $dark-color;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      // border-radius: 10px;
+    }
+  }
+}

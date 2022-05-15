@@ -1,0 +1,122 @@
+.docs-head {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 3rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  &__heading {
+    font-size: 5.6rem;
+  }
+  &__paragraph {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  &__img-box {
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+  &__img {
+    width: 20rem;
+  }
+}
+
+// Styling the main section
+.docs-main {
+  padding: 5rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  }
+  //   Styling the aside navigation
+  .aside {
+    background-color: $light-color;
+    padding: 3rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    // height: 45rem;
+    align-self: flex-start;
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    &__navigation {
+      margin-bottom: 3rem;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-left: 1rem;
+    }
+    &__item {
+      border-bottom: 1px solid rgb(194, 194, 194);
+    }
+    &__link {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #333;
+      &:hover {
+        font-weight: 400;
+      }
+    }
+  }
+  //   Styling the installation section
+  .installation {
+    font-size: 1.6rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    &__heading {
+      font-size: 2.4rem;
+    }
+    &__paragraph {
+      font-weight: 300;
+    }
+    &__alert {
+      background-color: #5cb85c;
+      color: #fff;
+      padding: 1rem;
+      padding-left: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    &__sub-heading {
+      font-weight: 400;
+      margin: 2rem 0 1rem 0;
+    }
+    ul {
+      font-weight: 300;
+    }
+    &__code {
+      background-color: #333;
+      color: #fff;
+      display: block;
+      font-size: 1.2rem;
+      padding: 1rem;
+      padding-left: 2rem;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .docs-head {
+    text-align: center;
+    .container {
+      grid-template-columns: 1fr;
+    }
+    &__img-box {
+      justify-self: center;
+    }
+  }
+  .docs-main {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+}

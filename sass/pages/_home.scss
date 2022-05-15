@@ -1,0 +1,245 @@
+// HEADER *STYLING*(SHOWCASE)
+.showcase {
+  position: relative;
+  height: 40rem;
+  background-color: $primary-color;
+  color: $white-color;
+  //   **********
+  &__text {
+    animation: 1.5s slideFromLeft;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 3.2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  &__heading {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+  &__paragraph {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 2rem 0 1rem 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 10rem;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    background: #fff;
+    transform: skewY(-4deg);
+    // z-index: -1;
+  }
+}
+// Styling the form
+.form-box {
+  justify-self: flex-end;
+  background-color: #fff;
+  color: $dark-color;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  position: relative;
+  top: 6rem;
+  height: 35rem;
+  width: 40rem;
+  padding: 4rem;
+  z-index: 300;
+  animation: 1.5s slideFromRight;
+  &__heading {
+    font-size: 2.4rem;
+  }
+}
+.form {
+  &__form-control {
+    margin: 3rem 0;
+  }
+  &__input {
+    border: none;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+// Styling stats
+.stats {
+  z-index: 100;
+  padding-top: 8rem;
+  text-align: center;
+  animation: 1.5s slideFromBottom 1.5s;
+  animation-fill-mode: backwards;
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 400;
+    // padding: 0 30rem;
+    max-width: 50rem;
+    line-height: 1.6;
+    margin: 0 auto;
+  }
+  &__stats-box {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__stat {
+    i {
+      font-size: 4.8rem;
+    }
+  }
+  &__sub-heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin: 0.4rem 0 1.2rem 0;
+  }
+  &__stat-type {
+    font-size: 2rem;
+    color: $secondary-color;
+    font-weight: 400;
+  }
+}
+// Styling CLI section
+.cli {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    // justify-content: center;
+    align-items: center;
+  }
+  &__img-box {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+  &__info-box {
+    grid-row: 1 / span 2;
+  }
+  &__info {
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    &:first-child {
+      margin-bottom: 5rem;
+    }
+  }
+}
+// Styling cloud
+.cloud {
+  padding: 3rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  &__heading {
+    font-size: 4.8rem;
+  }
+  &__paragraph {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 1rem 0 1.8rem 0;
+  }
+}
+// ***************STYLING LANGUAGES SECTION***************
+.languages {
+  text-align: center;
+  padding: 5rem 0;
+  &__heading {
+    font-size: 3.2rem;
+    margin-bottom: 5rem;
+  }
+  &__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  &__language-box {
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    transition: 0.3s all;
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  &__language-name {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+}
+// *******************Media queries*******************
+// Tablets
+// Under 768px
+@media (max-width: 920px) {
+  .showcase {
+    height: 70rem;
+    .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    &__heading {
+      margin-top: 3rem;
+    }
+  }
+  .form-box {
+    justify-self: center;
+    top: 7rem;
+    width: 30rem;
+  }
+}
+@media (max-width: 768px) {
+  .stats {
+    &__stats-box {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+  .cli {
+    padding-bottom: 3rem;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  .cloud {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Mobile
+
+// .showcase {
+//   position: relative;
+//   height: 40rem;
+//   background-color: $primary-color;
+//   color: $white-color;
+//   //   **********
+//   .container {
+//     display: grid;
+//     grid-template-columns: 55% 45%;
+//     gap: 3.2rem;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100%;
+//   }
